@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+
+:root {
+  --blue-hover: #666ca3;
+  --blue: #13183f;
+  --text-gray: #83869a;
+  --main-orange: #f74780;
+  --main-pink: #ffa7c3;
+  --white: #ffffff;
+  --primary-gradient: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+  --secondary-gradient: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+}
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  position: relative;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+/*typography*/
+
+.container {
+  margin: 0 20px;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+
+
+.hero {
+  /*margin-top: 4rem;*/
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap : 1.5rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.hero-content p {
+  color: var(--text-gray);
+}
+
+.hero-image {
+  background-image: url("./assets/image-hero-mobile.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+
+.intro-card {
+  background: var(--primary-gradient);
+  width: 100%;
+  color : white;
+  padding : 10px 20px;
+  font-size : 1.5rem;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.card-title {
+  color : #000000;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin : 2rem 0
+}
+
+.course-card {
+  padding: 10px 20px;
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap : 1.3rem;
+  position: relative;
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.course-card img {
+  width: 50px;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.course-card p {
+  color: var(--text-gray);
+}
+
+.course-card a {
+  color: var(--main-orange);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.card-title{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000000
+}
+
+footer {
+  background-color: var(--blue);
+}
+
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  padding-top : 1.5rem;
+  padding-bottom: 1.5rem;
+  align-items: center;
+}
+
+.btn {
+  background-color: var(--blue);
+  color : white;
+  padding : 10px 20px;
+  border-radius : 20px;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+  }
+  .hero-content {
+    width: 50%;
+  }
+  .hero-image {
+    /*background-image: url("./assets/image-hero-desktop.png");*/
+    height: auto;
+    background-color: red;
+  }
+
+  .courses {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .intro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-card {
+    width : 45%;
+  }
+}
